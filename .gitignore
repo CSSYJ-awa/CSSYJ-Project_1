@@ -1,41 +1,30 @@
-# Prerequisites
-*.d
+# 编译产物
+/bin/
+/obj/
+/build/
+/dist/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
+# 日志文件
+*.log
 *.out
-*.app
 
-# debug information files
-*.dwo
+# 环境配置
+.env
+.venv
+
+# IDE和编辑器配置
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 自定义忽略
+try/bin/
+try/build/
+try/scripts
