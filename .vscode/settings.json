@@ -105,6 +105,6 @@
     "typeinfo": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
-  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python-envs.defaultEnvManager": "ms-python.python:venv",
   "python-envs.pythonProjects": []
 }

@@ -1,0 +1,49 @@
+{
+  "steps": [
+    {
+      "draw": [
+        {"type": "axes", "xlim": [0, 8], "ylim": [0, 6]},
+        {"type": "point", "x": [1], "y": [1]},
+        {"type": "point", "x": [7], "y": [1]},
+        {"type": "point", "x": [7], "y": [5]},
+        {"type": "line", "x": [1, 7], "y": [1, 1]},
+        {"type": "line", "x": [7, 7], "y": [1, 5]},
+        {"type": "line", "x": [1, 7], "y": [1, 5]},
+        {"type": "line", "x": [1, 7], "y": [1, 5]}
+      ],
+      "because": "已知直角三角形ABC，A(1,1)，B(7,1)，C(7,5)，AB为底，BC为高，AC为斜边。",
+      "so": "作出三角形ABC。"
+    },
+    {
+      "draw": [
+        {"type": "axes", "xlim": [0, 8], "ylim": [0, 6]},
+        {"type": "point", "x": [1], "y": [1]},
+        {"type": "point", "x": [7], "y": [1]},
+        {"type": "point", "x": [7], "y": [5]},
+        {"type": "line", "x": [1, 7], "y": [1, 1]},
+        {"type": "line", "x": [7, 7], "y": [1, 5]},
+        {"type": "line", "x": [1, 7], "y": [1, 5]},
+        {"type": "square", "x": [1, 7], "y": [1, 1], "size": 6}
+      ],
+      "because": "在AB、BC、AC三边上分别作正方形。",
+      "so": "展示三边上的正方形。"
+    },
+    {
+      "draw": [
+        {"type": "axes", "xlim": [0, 8], "ylim": [0, 6]},
+        {"type": "point", "x": [1], "y": [1]},
+        {"type": "point", "x": [7], "y": [1]},
+        {"type": "point", "x": [7], "y": [5]},
+        {"type": "line", "x": [1, 7], "y": [1, 1]},
+        {"type": "line", "x": [7, 7], "y": [1, 5]},
+        {"type": "line", "x": [1, 7], "y": [1, 5]},
+        {"type": "square", "x": [1, 7], "y": [1, 1], "size": 6},
+        {"type": "square", "x": [7, 7], "y": [1, 5], "size": 4},
+        {"type": "circle", "center": [0, 0], "radius": 5},
+        {"type": "square", "x": [1, 7], "y": [1, 5], "size": 8}
+      ],
+      "because": "正方形面积分别为底边、垂边、斜边的平方。",
+      "so": "斜边上的正方形面积等于其他两边正方形面积之和，即勾股定理。"
+    }
+  ]
+}
