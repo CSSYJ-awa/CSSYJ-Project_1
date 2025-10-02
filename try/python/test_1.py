@@ -1,1 +1,1 @@
-print(1 + -5)
+print(float('3'))

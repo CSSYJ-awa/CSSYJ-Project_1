@@ -6,7 +6,7 @@ from GeneralMathematicalTool import *
 def SimpleExpressionCalculation_Str(expression: list):
     '''简单数学表达式运算'''
     if IsStrTypeNumber(expression[0]):
-        result = int(expression[0])
+        result = float(expression[0])
     else:
         result = 0
     OmitCharacterCount = 0
@@ -23,10 +23,10 @@ def SimpleExpressionCalculation_Str(expression: list):
         elif ReadCharacter in NormalExpressionCharacters:
             if ReadCharacter == '+':
                 OmitCharacterCount += 1
-                result = result + int(expression[ReadCharacter_Position + OmitCharacterCount])
+                result = result + float(expression[ReadCharacter_Position + OmitCharacterCount])
             if ReadCharacter == '-':
                 OmitCharacterCount += 1
-                result = result - int(expression[ReadCharacter_Position + OmitCharacterCount])
+                result = result - float(expression[ReadCharacter_Position + OmitCharacterCount])
     
     print(fr'SimpleResult:{result}')
     return str(result)
@@ -126,7 +126,6 @@ def ExpressionCalculation(expression):
     return result
     
 
-# 
 # print(fr'result:{ExpressionCalculation('111+11+22-(-11-66+43)')}')
 print(fr'result:{ExpressionCalculation('[(11-9)+7-(11+1)]-{[111-(11+77)]+1}')}')
 # print(fr'result:{ExpressionCalculation('23+22+12')}')
