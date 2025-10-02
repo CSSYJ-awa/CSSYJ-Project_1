@@ -5,12 +5,12 @@ ExpressionCharacters = ['+','-','*','/']
 
 def ExpressionParsing(expression):
     '''数学表达式解析'''
+
     ParsedExpression = []
     OmitCharacterCount = 0
     ReadCharacter_Position = -1
 
     for ReadCharacter in expression:
-        # print(ReadCharacter)
         ReadCharacter_Position += 1
         if OmitCharacterCount > 0:
             OmitCharacterCount -= 1
@@ -21,13 +21,19 @@ def ExpressionParsing(expression):
                 ReadNumbers = ''
                 ReadNumbersCharacter = ''
                 BeyondList = False
-                while not BeyondList in NormalNumbers:
+                while not BeyondList:
                     try:
                         ReadNumbersCharacter = expression[ReadCharacter_Position + OmitCharacterCount]
                     except IndexError:
                         BeyondList = True
                     ReadNumbers += ReadNumbersCharacter
+                    try:
+                        if not(expression[ReadCharacter_Position + OmitCharacterCount + 1] in NormalNumbers):
+                            break
+                    except IndexError:
+                        pass
                     OmitCharacterCount += 1
+                    print(ReadNumbers)
                 ParsedExpression.append(ReadNumbers)
             else:
                 ParsedExpression.append(ReadCharacter)
@@ -113,4 +119,4 @@ def ExpressionCalculation(expression):
     
 
 
-print(fr'result:{ExpressionCalculation('111+11+22')}')
+print(fr'result:{ExpressionCalculation('111+11+22-(-11-66+43)')}')
