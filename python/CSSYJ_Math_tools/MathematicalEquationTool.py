@@ -32,7 +32,6 @@ def SimpleExpressionCalculation_Str(expression: list):
     return str(result)
 
 
-
 def ExpressionParsing(expression: str):
     '''数学表达式解析'''
 
