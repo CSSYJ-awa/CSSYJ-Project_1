@@ -5,7 +5,7 @@
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "E:\\Program Files\\TDM-GCC\\bin\\g++.exe",
+      "compilerPath": "D:\\Program Files\\msys64\\ucrt64\\bin\\g++.exe",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "cStandard": "c17",
