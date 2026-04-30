@@ -1,5 +1,6 @@
 # 编译产物
 /bin/
+/Try/bin/
 /obj/
 /build/
 /dist/
