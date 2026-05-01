@@ -4,7 +4,7 @@
     {
       "label": "C/C++: g++.exe 生成活动文件",
       "type": "cppbuild",
-      "command": "D:\\Program Files\\msys64\\ucrt64\\bin\\g++.exe",
+      "command": "g++.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-g",
@@ -15,9 +15,6 @@
         "-Wall",
         "-Wextra"
       ],
-      "options": {
-        "cwd": "D:\\Program Files\\msys64\\ucrt64\\bin"
-      },
       "group": {
         "kind": "build",
         "isDefault": true
@@ -27,7 +24,7 @@
     {
       "label": "C/C++: gcc.exe 生成活动文件",
       "type": "cppbuild",
-      "command": "D:\\Program Files\\msys64\\ucrt64\\bin\\gcc.exe",
+      "command": "gcc.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-g",
@@ -35,14 +32,33 @@
         "-o",
         "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
       ],
-      "options": {
-        "cwd": "${fileDirname}"
-      },
       "group": {
         "kind": "build",
         "isDefault": false
       },
       "detail": "保留 gcc 任务作为可选项（不再为默认）。"
+    }
+    ,
+    {
+      "label": "C/C++: g++.exe 生成 GUI 可执行文件",
+      "type": "cppbuild",
+      "command": "g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-mwindows"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "detail": "使用 g++ 和 -mwindows 构建，生成打开时不弹出控制台的可执行文件。"
     }
   ]
 }
